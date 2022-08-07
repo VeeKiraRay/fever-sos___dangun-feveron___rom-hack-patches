@@ -6,7 +6,7 @@ Collection of different patch files to get changes for either Fever SOS or Dangu
 - Change the initials of the default top-5 scores
 - Change the number of disco men the default top-5 have
 - Change ship color (P1 and P2)
-- Have 255 lives if you select start with 5 lives options from settings. Other number of lives settings work as normal. 
+- Have 255 lives if you select start with 5 lives options from settings (Other number of lives settings work as normal)
 
 ### Background
 These are  my first rom hacks and other people have already done most of the heavy lifting regarding Fever SOS and the Dangun Feveron rom hacks.

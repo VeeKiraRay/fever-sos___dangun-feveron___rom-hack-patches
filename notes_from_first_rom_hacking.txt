@@ -1,0 +1,48 @@
+Documentation of rom hacking
+
+
+Software
+Cygnus hex editor (Windows store app)
+- to read and alter rom (bin files)
+- Can compare two files to show what has changed (clean vs. modified)
+
+Lunar IPS (zip file download)
+- Applying .ips (patch files) on top of rom files
+- Creating .ips by comparing modified and clean rom
+
+
+Example ips file
+5041 5443 4800 46ee 0001 7100 47a3 0002
+7171 031b 2800 0950 0040 0030 0020 0010
+454f 46
+ 
+NOTES
+Place calculation starts from 0 so that why the actual place number is always + 1 of the value
+
+CAN BE IGNORED WHEN TRYING TO UNDERSTAND FILE CONTENT
+5041 5443 48 == patch (necessary start of file)
+454f 46 == eof (necessary end of file)
+
+FIRST ROW (00 46ee 0001 71)
+00 46ee (address and place 000046e0 and place e (14) = 15th value)
+
+0001 (length, how many values will be changed. Here it is one (1) value)
+
+71 (new value for previously mentioned address, place and length. This was part of removing the security check.)
+
+FIRST ROW continued (00 47a3 0002)
+00 47a3 (address and place 000047a0 and place 3 = 4th value)
+
+0002 (length, how many values will be changed. Here it is two (2) values)
+
+
+SECOND ROW (7171)
+7171 (new values for previously mentioned address, place and length from the row 1. This was part of removing the security check.)
+
+
+SECOND ROW CONTINUED (031b 2800 0950 0040 0030 0020 0010)
+031b 28 (address and place 00031b20 and place 8 = 9th value)
+
+00 09 (length, how many values will be changed. Here it is nine (9) values)
+
+50 0040 0030 0020 0010 (new value for previously mentioned address, place and length from the row 1. These are the tenths of the scores 50, 40, 30 ,20 and 10)
