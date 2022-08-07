@@ -1,4 +1,4 @@
-# Change default top-5 disco men count
+# Change default top-5 initials
 Just for fun if you would like to write some funny initials or otherwise mark what you have modded in the roms.
 
 The initials are on rom 33
